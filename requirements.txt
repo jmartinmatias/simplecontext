@@ -1,0 +1,9 @@
+# SimpleContext Core Dependencies
+# Python 3.10+ required
+
+# MCP Server Framework
+fastmcp>=0.1.0
+
+# Standard library dependencies (no installation needed):
+# - sqlite3 (bundled with Python)
+# - uuid, time, json, pathlib, typing, functools, sys, os
