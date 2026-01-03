@@ -68,7 +68,19 @@ python3 --version  # Must be 3.10 or higher
 
 ## Installation
 
-### 1. Clone and Install
+### Quick Install (Recommended)
+
+```bash
+# Clone the repository
+git clone https://github.com/jmartinmatias/simplecontext.git
+cd simplecontext
+
+# Run automated installer
+./install.sh
+# Checks Python version, installs dependencies, runs tests
+```
+
+### Manual Install
 
 ```bash
 # Clone the repository
