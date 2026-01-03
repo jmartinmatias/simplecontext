@@ -23,3 +23,6 @@ ENV/
 
 # OS
 .DS_Store
+
+# Internal Planning (do not commit)
+COMMUNICATION_PLAN.md
