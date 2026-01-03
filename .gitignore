@@ -16,6 +16,11 @@ ENV/
 .pytest_cache/
 .coverage
 
+# Build & Distribution
+dist/
+build/
+*.egg-info/
+
 # IDE
 .idea/
 .vscode/
@@ -27,3 +32,4 @@ ENV/
 # Internal Planning (do not commit)
 COMMUNICATION_PLAN.md
 DEPLOYMENT.md
+PYPI_DEPLOYMENT_GUIDE.md

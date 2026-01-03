@@ -14,7 +14,7 @@ authors = [
 ]
 keywords = ["claude", "mcp", "memory", "context", "ai", "assistant"]
 classifiers = [
-    "Development Status :: 4 - Beta",
+    "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
@@ -41,11 +41,11 @@ Repository = "https://github.com/jmartinmatias/simplecontext"
 Issues = "https://github.com/jmartinmatias/simplecontext/issues"
 
 [tool.setuptools]
-package-dir = {"" = "."}
-packages = ["src"]
+package-dir = {"simplecontext" = "src"}
+packages = ["simplecontext"]
 
 [tool.setuptools.package-data]
-src = ["*.py"]
+simplecontext = ["*.py"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
