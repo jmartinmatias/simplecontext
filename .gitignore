@@ -26,3 +26,4 @@ ENV/
 
 # Internal Planning (do not commit)
 COMMUNICATION_PLAN.md
+DEPLOYMENT.md
