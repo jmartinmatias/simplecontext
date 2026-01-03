@@ -1,8 +1,12 @@
 # SimpleContext
 
+[![PyPI version](https://badge.fury.io/py/simplecontext.svg)](https://badge.fury.io/py/simplecontext)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 **Persistent memory for Claude Code via MCP** – Store and recall context across conversations.
 
-Version: **1.0.0** | Status: **Production Ready** | License: MIT
+Version: **1.0.0** | Status: **Production Ready** | [PyPI](https://pypi.org/project/simplecontext/)
 
 ---
 
@@ -68,37 +72,47 @@ python3 --version  # Must be 3.10 or higher
 
 ## Installation
 
-### Quick Install (Recommended)
+### From PyPI (Recommended) ⭐
+
+```bash
+pip install simplecontext
+```
+
+That's it! SimpleContext is now installed and ready to use.
+
+### From Source (For Development)
 
 ```bash
 # Clone the repository
 git clone https://github.com/jmartinmatias/simplecontext.git
 cd simplecontext
 
-# Run automated installer
+# Option 1: Quick install with script
 ./install.sh
-# Checks Python version, installs dependencies, runs tests
-```
 
-### Manual Install
-
-```bash
-# Clone the repository
-git clone https://github.com/jmartinmatias/simplecontext.git
-cd simplecontext
-
-# Install dependencies
+# Option 2: Manual install
 pip install -r requirements.txt
-
-# Run tests to verify installation
-pytest tests/
-# Expected: 7 passed in ~0.15s
+pytest tests/  # Verify installation
 ```
 
-### 2. Configure Claude Code
+### Configure Claude Code
 
 Add SimpleContext to your MCP configuration file at `~/.claude/.mcp.json`:
 
+**If installed via pip:**
+```json
+{
+  "mcpServers": {
+    "simplecontext": {
+      "command": "python3",
+      "args": ["-m", "simplecontext.simplecontext"],
+      "cwd": "/your/working/directory"
+    }
+  }
+}
+```
+
+**If installed from source:**
 ```json
 {
   "mcpServers": {
@@ -111,14 +125,11 @@ Add SimpleContext to your MCP configuration file at `~/.claude/.mcp.json`:
 }
 ```
 
-**Important:** Replace `/absolute/path/to/simplecontext` with the actual path where you cloned the repo.
+**Important:** Replace `/your/working/directory` with the directory where you want the `.simplecontext.db` file created.
 
-### 3. Restart Claude Code
+### Restart Claude Code
 
-```bash
-# Restart Claude Code to load the MCP server
-# The simplecontext tools will now be available
-```
+Restart Claude Code to load the MCP server. SimpleContext tools will now be available!
 
 ---
 
